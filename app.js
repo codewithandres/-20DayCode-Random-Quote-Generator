@@ -16,16 +16,24 @@ const randomQuote = async () => {
 
         const response = await fetch('http://api.quotable.io/random');
         const result = await response.json();
+        const { content, author } = result
 
-        quoteText.innerHTML = result.content;
-        autorName.innerHTML = result.author;
-        quoteBtn.classList.remove('louding');
-        quoteBtn.innerHTML = 'New Quoat';
+        render(content, author);
+
     } catch (err) {
-        console.log(err.message);
+        let error = new Error("Estas cosas pasan... o_O");
+        console.log(error.message);
     }
 
 };
+
+const render = (content, author) => {
+
+    quoteText.innerHTML = content;
+    autorName.innerHTML = author;
+    quoteBtn.classList.remove('louding');
+    quoteBtn.innerHTML = 'New Quoat';
+}
 
 soundBtn.addEventListener('click', () => {
 
