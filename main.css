@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --bg-color: hsl(219, 94%, 7%);
+    --text-color: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--bg-color);
+    color: var(--text-color);
+
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.wrapper {
+    width: 600px;
+    background-color: #000a1d;
+    border-radius: 0.5em;
+    padding: 30px 30px 25px;
+}
+
+.wrapper header {
+    font-size: 2em;
+    font-weight: 600;
+    text-align: center;
+}
+
+.wrapper .content {
+    margin: 35px 0;
+}
+
+.content .quote-area {
+    display: flex;
+    justify-content: center;
+}
+
+.quote-area i {
+    font-size: 2em;
+}
+
+.quote-area i:first-child {
+    margin: 3px 10px 0 0;
+}
+
+.quote-area i:last-child {
+    margin: 0 0 3px 10px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.quote-area .quote {
+    font-size: 1.1em;
+    text-align: center;
+    word-break: break-all;
+}
+
+.content .autor {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    font-size: 18px;
+    font-style: italic;
+}
+
+.autor span:first-child {
+    margin: -10px 5px 0 0;
+    font-family: monospace;
+}
+
+.wrapper .buttons {
+    border-top: 1px solid hsla(0, 0%, 100%, 0.432);
+}
+
+.buttons .features {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 23px;
+}
+
+.features ul {
+    display: flex;
+    list-style: none;
+}
+
+.features ul li {
+    margin: 0 5px;
+    height: 40px;
+    width: 40px;
+    border: 2px solid hsl(196, 97%, 37%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: hsl(196, 97%, 37%);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.features ul li:hover {
+    background-color: hsl(196, 97%, 37%);
+    color: var(--text-color);
+}
+
+.features button {
+    border: none;
+    outline: none;
+    padding: 13px 22px;
+    border-radius: 30px;
+    background-color: hsl(196, 97%, 37%);
+    color: var(--text-color);
+    font-family: inherit;
+    font-size: .9em;
+    cursor: pointer;
+}
+
+button.louding {
+    opacity: 0.7;
+    pointer-events: none;
+}
