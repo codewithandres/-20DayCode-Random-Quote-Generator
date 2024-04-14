@@ -7,19 +7,24 @@ const quoteText = document.querySelector('.quote'),
     twitterBtn = document.querySelector('.twitter');
 
 
-const randomQuote = () => {
+const randomQuote = async () => {
 
     quoteBtn.classList.add('louding');
     quoteBtn.innerHTML = 'Louding quote...';
 
-    fetch('http://api.quotable.io/random').then(res => res.json()).then(result => {
+    try {
 
-        console.log(result);
+        const response = await fetch('http://api.quotable.io/random');
+        const result = await response.json();
+
         quoteText.innerHTML = result.content;
         autorName.innerHTML = result.author;
         quoteBtn.classList.remove('louding');
         quoteBtn.innerHTML = 'New Quoat';
-    });
+    } catch (e) {
+        console.log('error de peticion');
+    }
+
 };
 
 soundBtn.addEventListener('click', () => {
