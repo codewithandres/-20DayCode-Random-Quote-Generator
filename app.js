@@ -35,5 +35,6 @@ twitterBtn.addEventListener('click', () => {
     window.open(twitterUrl, '_blank')
 });
 
+window.addEventListener('load', randomQuote)
 quoteBtn.addEventListener('click', randomQuote);
 
