@@ -21,8 +21,8 @@ const randomQuote = async () => {
         autorName.innerHTML = result.author;
         quoteBtn.classList.remove('louding');
         quoteBtn.innerHTML = 'New Quoat';
-    } catch (e) {
-        console.log('error de peticion');
+    } catch (err) {
+        console.log(err.message);
     }
 
 };
